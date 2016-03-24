@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol RGBButtonDelegate
--(void)didTapButton:(UIButton *)button forIndex:(int)index;
+@optional
+-(void)setColorForIndex:(int)index red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
 @end
 
 

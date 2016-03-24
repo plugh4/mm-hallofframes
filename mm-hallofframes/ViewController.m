@@ -38,6 +38,7 @@
         [self.dataArray addObject:picture];
     }
     
+    // create RGB
     self.customView = [[[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil] objectAtIndex:0];
     self.customView.delegate = self;
 }
@@ -75,6 +76,7 @@
     NSLog(@"%@", NSStringFromSelector(_cmd));
     NSLog(@"row %i", indexPath.row);
     
+    // show RGB
     NSLog(@"adding subview");
     self.customView.cellIndex = i;
     [self.view addSubview:self.customView];
@@ -110,16 +112,28 @@
     data.bgColor = [self stringToColor:button.titleLabel.text];
     [self.collectionView reloadData];
     
-    // removeFromSuperview
+    // hide RGB
     [self.customView removeFromSuperview];
 }
 
-
-
--(void)didTapCell:(UICollectionViewCell *)cell
+-(void)setColorForIndex:(int)index red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue 
 {
-    NSLog(@"%@", NSStringFromSelector(_cmd));    
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"r=%.2f, g=%.2f, b=%.2f", red, green, blue);
+    NSLog(@"index %i", index);
+    
+    // pick color
+    // set cell background color
+    Picture *data = self.dataArray[index];
+    data.bgColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    [self.collectionView reloadData];
+    
+    // hide RGB
+    [self.customView removeFromSuperview];
+    
 }
 
-    
+
+
+
 @end
