@@ -119,7 +119,7 @@
 -(void)setColorForIndex:(int)index red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue 
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
-    NSLog(@"r=%.2f, g=%.2f, b=%.2f", red, green, blue);
+    NSLog(@"r=%.1f, g=%.1f, b=%.1f", red, green, blue);
     NSLog(@"index %i", index);
     
     // pick color

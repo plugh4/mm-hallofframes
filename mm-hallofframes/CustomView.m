@@ -19,6 +19,8 @@
     // Drawing code
 }
 */
+
+
 - (IBAction)onRGBPressed:(UIButton *)sender
 {
     CGFloat r = 0.0;
@@ -34,6 +36,15 @@
         b = 1.0;
     }
     
+    int i = self.cellIndex;
+    [self.delegate setColorForIndex:i red:r green:g blue:b];
+}
+
+- (IBAction)applyButtonPressed:(UIButton *)sender {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    CGFloat r = self.redSlider.value;
+    CGFloat g = self.greenSlider.value;
+    CGFloat b = self.blueSlider.value;
     int i = self.cellIndex;
     [self.delegate setColorForIndex:i red:r green:g blue:b];
 }

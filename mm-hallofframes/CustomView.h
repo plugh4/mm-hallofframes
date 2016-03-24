@@ -17,5 +17,9 @@
 @interface CustomView : UIView
 @property (nonatomic, assign) id <RGBButtonDelegate> delegate;
 @property int cellIndex;
+@property (weak, nonatomic) IBOutlet UISlider *redSlider;
+@property (weak, nonatomic) IBOutlet UISlider *greenSlider;
+@property (weak, nonatomic) IBOutlet UISlider *blueSlider;
+
 
 @end

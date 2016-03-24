@@ -11,38 +11,44 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-XB-8av">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-XB-8av">
                     <rect key="frame" x="80" y="40" width="440" height="520"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbc-su-oK1">
-                            <rect key="frame" x="0.0" y="0.0" width="440" height="107"/>
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="Red">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oeb-Ih-bf5">
+                            <rect key="frame" x="0.0" y="0.0" width="440" height="85"/>
+                            <subviews>
+                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NeC-nc-ufk">
+                                    <rect key="frame" x="-2" y="8" width="444" height="25"/>
+                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </slider>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKU-xg-waz">
+                            <rect key="frame" x="0.0" y="145" width="440" height="85"/>
+                            <subviews>
+                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dYo-AN-9BS">
+                                    <rect key="frame" x="-2" y="8" width="444" height="25"/>
+                                    <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </slider>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izz-MX-6cM">
+                            <rect key="frame" x="0.0" y="290" width="440" height="85"/>
+                            <subviews>
+                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d8n-7h-6af">
+                                    <rect key="frame" x="-2" y="8" width="444" height="25"/>
+                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </slider>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6O-o4-WQi">
+                            <rect key="frame" x="0.0" y="435" width="440" height="85"/>
+                            <state key="normal" title="Apply"/>
                             <connections>
-                                <action selector="onRGBPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="5N6-7G-9yE"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdV-I1-Wcd">
-                            <rect key="frame" x="0.0" y="207" width="440" height="106"/>
-                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="Green">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="onRGBPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="K8J-Y7-d5c"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-1z-lPC">
-                            <rect key="frame" x="0.0" y="413" width="440" height="107"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="Blue">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="onRGBPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="uVx-4O-bMC"/>
+                                <action selector="applyButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="izy-7A-c9Y"/>
                             </connections>
                         </button>
                     </subviews>
@@ -55,6 +61,11 @@
                 <constraint firstItem="kHA-XB-8av" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="kpm-Mp-ApK"/>
                 <constraint firstAttribute="trailing" secondItem="kHA-XB-8av" secondAttribute="trailing" constant="80" id="nOl-gy-WEt"/>
             </constraints>
+            <connections>
+                <outlet property="blueSlider" destination="d8n-7h-6af" id="qZ2-Fi-7gF"/>
+                <outlet property="greenSlider" destination="dYo-AN-9BS" id="wTF-sV-UOn"/>
+                <outlet property="redSlider" destination="NeC-nc-ufk" id="gS7-uy-2QH"/>
+            </connections>
         </view>
     </objects>
 </document>
