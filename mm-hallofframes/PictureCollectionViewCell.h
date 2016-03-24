@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+//@protocol PictureCellDelegate
+//-(void)didTapCell:(UICollectionViewCell *)cell;
+//@end
+
+
 @interface PictureCollectionViewCell : UICollectionViewCell
-
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
-
+//@property (nonatomic, assign) id <PictureCellDelegate> delegate;
 @end

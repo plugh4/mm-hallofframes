@@ -59,6 +59,9 @@
                             <constraint firstItem="ZMI-wI-sKK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="paN-IU-bTm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ZMI-wI-sKK" id="d0e-cb-9Pf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
